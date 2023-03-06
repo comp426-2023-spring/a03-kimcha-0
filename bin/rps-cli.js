@@ -1,0 +1,1 @@
+#!./bin/rps-cli.js
