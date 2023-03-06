@@ -4,7 +4,7 @@ import minimist from "minimist";
 
 const args = minimist(process.argv.slice(2));
 
-console.log(args);
+//console.log(args);
 
 function rps() {
   const results = ['rock', 'paper', 'scissors'];
