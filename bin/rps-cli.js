@@ -8,7 +8,9 @@ const args = minimist(process.argv.slice(2));
 
 function rps() {
   const results = ['rock', 'paper', 'scissors'];
-  return results[Math.floor(Math.random() * results.length)];
+  return {
+	   "player": results[Math.floor(Math.random() * results.length)]
+  };
 }
 
 if (args.h) {
