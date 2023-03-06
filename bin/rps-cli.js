@@ -41,6 +41,8 @@ if (args.h) {
     } catch (err) {
         process.exit(1);
       }
+} else {
+    console.log(rps());
 }
            
 
