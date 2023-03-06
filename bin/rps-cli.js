@@ -1,8 +1,15 @@
-#!./bin/rps-cli.js
+#!/usr/bin/env node
 
 import minimist from "minimist";
 
 const args = minimist(process.argv.slice(2));
+
+console.log(args);
+
+function rps() {
+  const results = ['rock', 'paper', 'scissors'];
+  return results[Math.floor(Math.random() * results.length)];
+}
 
 if (args.h) {
   try {
@@ -22,5 +29,18 @@ if (args.h) {
   } catch (err) {
       process.exit(1);
     }
+} else if(args.r) {
+    try {
+      console.log(`
+        Rules for Rock Paper Scissors:
+
+          - Scissors CUTS Paper
+          - Paper COVERS Rock
+          - Rock CRUSHES Scissors
+      `);
+    } catch (err) {
+        process.exit(1);
+      }
 }
+           
 
