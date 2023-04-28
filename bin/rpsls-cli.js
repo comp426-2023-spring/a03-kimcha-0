@@ -48,7 +48,7 @@ if (args.h || process.argv[process.argv.indexOf('--help')]) {
     process.exit(1);
 } else {
     try {
-      rpsls();
+      console.log(JSON.stringify(rpsls(process.argv[2])));
       process.exit(0);
     } catch (err) {
         if (err instanceof RangeError) {
